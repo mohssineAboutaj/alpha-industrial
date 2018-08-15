@@ -1,0 +1,710 @@
+/*
+** Template name : alphaIndustrial 
+** Creation date : 04/03/2018 
+** Author        : Mohssine Aboutaj 
+** Description   : This is template single page for your industry and factory, you can also customize for use in your work
+** Contact Me    : mohssineaboutajtemplates@gmail.com
+*/
+// main colors
+$mainColor: #fdca01;
+$darkColor: #091b29;
+$wColor: #fff;
+$xColor: #94beca;
+//////////////////////////////
+
+/* Start grouping element */
+// import file classes.scss for use placeholder classes
+@import "classes";
+%trans {
+  @include prefix(transition, all .5s ease-in-out);
+  cursor: pointer;
+}
+
+%headingStyle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  border: none !important;
+}
+
+#services .services-head > div,
+#services .services-head > p,
+#services .services-head .btn, 
+#blog .news-head > div,
+#blog .news-head > p,
+#blog .news-head .btn {
+  width: 25%;
+  @extend %fl-l;
+}
+
+#services .services-head > p,
+#blog .news-head > p {
+  width: 50%;
+  padding: 0px 10px;
+}
+
+#services .services-head .btn, 
+#blog .news-head .btn {
+  @extend %txt-c;
+  margin: 30px 0;
+  background-color: $mainColor;
+}
+
+#services .services-head .btn:hover, 
+#blog .news-head .btn:hover {
+  color: $mainColor;
+  background-color: $darkColor;
+}
+/* End grouping element */
+
+/* Start global properties */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: $darkColor;
+  background-color: #eaeaea;
+}
+
+@for $i from 1 to 6 {
+  h#{$i} { @extend %headingStyle }
+}
+
+.section:nth-child(odd) { background-color: $darkColor }
+
+.section:nth-child(odd) p { color: $xColor }
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+h2::after { color: $mainColor }
+
+.special-heading h2::after { border-width: 0 0 2px 0  }
+/* End global properties */
+
+/* Start top-navbar */
+.top-navbar {
+  background-color: $darkColor;
+  color: $mainColor;
+  padding: 20px 10px;
+  @extend %cap;
+}
+
+.top-navbar .contact,
+.top-navbar .follow {
+  @extend %ib;
+}
+
+.top-navbar .contact span {
+  font-size: .75em;
+  margin-#{$left}: 20px;
+}
+
+.top-navbar .contact span i { 
+  font-size: 1rem;
+  margin: 0 10px;
+  color: $wColor;
+}
+
+.top-navbar .follow { text-align: $right }
+
+.top-navbar .follow i {
+  color: $wColor;
+  margin: 0 5px;
+}
+/* End top-navbar */
+
+/* Start middle-navbar */
+.middle-navbar {
+  font-weight: bold;
+  @extend %cap;
+}
+
+.middle-navbar i { color: $mainColor }
+
+.middle-navbar .factory , 
+.middle-navbar .certified , 
+.middle-navbar .winner {
+  @extend %fl-l;
+  width: calc(100% / 3);
+  padding: 5px;
+  @extend %overHide;
+}
+
+.middle-navbar .factory i,
+.middle-navbar .certified i,
+.middle-navbar .winner i,
+.middle-navbar .factory span, 
+.middle-navbar .certified span, 
+.middle-navbar .winner span {
+  @extend %fl-l;
+}
+
+.middle-navbar .factory i,
+.middle-navbar .certified i,
+.middle-navbar .winner i, {
+  margin-#{$right}: 5px;
+}
+
+.middle-navbar .factory span, 
+.middle-navbar .certified span, 
+.middle-navbar .winner span {
+  @extend %block;
+}
+
+
+.middle-navbar .factory span:first-of-type { font-size: 2em }
+
+.middle-navbar .winner span:first-of-type, 
+.middle-navbar .certified span:first-of-type {
+  font-size: 1.5em
+}
+
+.middle-navbar .factory span:last-child, 
+.middle-navbar .winner span:last-child, 
+.middle-navbar .certified span:last-child {
+  color: $mainColor
+}
+/* End middle-navbar */
+
+/* Start main-navvar */
+nav {
+  background-color: $mainColor;
+  @extend %overHide;
+}
+
+nav .logo {
+  background-color: $darkColor;
+  padding: 10px;
+  color: $mainColor;
+  @extend %upper;
+  font-size: .75em;
+}
+
+nav .logo i {
+  margin: 0 5px;
+  font-size: 1rem;
+}
+
+nav .navbar { float: $right }
+
+nav .navbar a {
+  color: $darkColor !important;
+  padding: 10px;
+}
+
+nav .navbar li i { margin: 0 10px }
+
+nav .navbar a.active, nav .navbar a:hover, nav .navbar a:focus {
+  background-color: $darkColor;
+  color: $mainColor !important;
+}
+
+nav .nav-btn {
+  color: $darkColor;
+  border-color: $darkColor;
+}
+/* End main-navvar */
+
+/* Start header */
+header {
+  color: $wColor;
+  background: url('../img/header.jpg');
+  @include prefix(background-size, cover);
+  padding: 0;
+  min-height: 500px;
+}
+
+header h1 span { color: $mainColor }
+
+header .btn:first-of-type {
+  background-color: $mainColor;
+  color: $darkColor;
+  @extend %trans;
+}
+
+header .btn {
+  border: 1px solid $mainColor;
+}
+
+header .btn:hover {
+  background-color: $mainColor;
+  color: $darkColor;
+}
+
+header .bx-wrapper {
+  padding: 0 50px;
+  @extend %txt-c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* End header */
+
+/* Start services */
+#services { @extend %overHide }
+
+#services .services-head { @extend %overHide }
+
+#services .services-body {
+  @extend %rel;
+  @extend %overHide;
+}
+
+#services .services-body .service-img { 
+  @extend %rel;
+  @extend %overHide;
+}
+
+#services .services-body .service-img img { width: 100% }
+
+#services .services-body .img-title {
+  @extend %abs;
+  bottom: 0;
+  #{$right}: 0;
+  #{$left}: 5px;
+  margin-bottom: 10px;
+  color: $wColor;
+  @extend %overHide;
+}
+
+#services .services-body .img-title span, 
+#services .services-body .img-title h4 {
+  @extend %fl-l;
+  @extend %ib;
+}
+
+#services .services-body .img-title span {
+  margin-#{$right}: 10px;
+  background-color: $mainColor;
+  color: $darkColor;
+  font-size: 2em;
+  padding: 10px;
+  @extend %circle;
+}
+
+#services .services-body .img-title span, 
+#services .services-body .img-title .img-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#services .services-body .img-title:hover {
+  background-color: $mainColor;
+  @extend %overlay;
+  @extend %txt-c;
+  padding: 20px 0;
+}
+
+#services .services-body .img-title .img-btns { display: none; }
+
+#services .services-body .img-title:hover .img-btns { display: block; }
+/* End services */
+
+/* Start testim */
+.testim .bx-viewport { 
+  overflow: visible !important;
+}
+
+.testim p { 
+  @extend %rel;
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+.testim p::after, .testim p::before {
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  @extend %abs;
+  @extend %txt-c;
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  color: $mainColor;
+}
+
+.testim p::after {
+  content: '\f10d';
+  #{$left}: -60px;
+  top: -5px;
+}
+
+.testim p::before {
+  content: '\f10e';
+  #{$right}: -60px;
+  bottom: 0;
+}
+
+.testim p:first-letter {
+  background-color: $mainColor;
+  padding: 0 5px;
+  margin-right: 2px;
+  color: $darkColor;
+}
+
+.testim .testim-about { margin-#{$left}: 40px }
+
+.testim .testim-about .testim-img {
+  border-bottom: 2px solid $mainColor;
+  margin-#{$right}: 20px;
+}
+
+.testim .testim-about .testim-info span {
+  @extend %cap;
+  @extend %block;
+}
+
+.testim .testim-about .testim-info span:first-child {
+  font-size: 2em;
+  color: $mainColor
+}
+
+.testim .testim-about img { max-width: 100px !important }
+
+.testim .testim-about .testim-info span:last-child {
+  font-size: 0.75em;
+  color: $xColor
+}
+
+.testim .bx-wrapper { background: transparent !important }
+
+.testim .bx-wrapper a.bx-prev,
+.testim .bx-wrapper a.bx-next {
+  bottom: -60px;
+  top: auto;
+  @include prefix(border-radius, 0 50% 50% 0 !important);
+}
+
+.testim .bx-wrapper a.bx-prev {
+  #{$right}: 50px;
+  #{$left}: auto;
+  @include prefix(border-radius, 50% 0 0 50% !important);
+}
+/* End testim */
+
+/* Start we-offer */
+.we-offer .offer > div {
+  @extend %overHide;
+  margin-bottom: 20px;
+}
+
+.we-offer .offer:nth-child(1) h2 { margin-bottom: 20px; }
+
+.we-offer .offer:nth-child(1) .btn { background-color: $mainColor }
+
+.we-offer .offer img, .we-offer .offer .offer-info {
+  @extend %fl-l;
+  @extend %ib;
+}
+
+.we-offer .offer img { width: 20% }
+
+.we-offer .offer .offer-info {
+  width: 80%;
+  padding: 0 10px;
+}
+
+.we-offer .offer .offer-info h3 { margin: 0 }
+/* End we-offer */
+
+/* Start projects */
+#projects {
+  @extend %txt-c;
+  color: $wColor;
+}
+
+#projects .projectImgs {
+  @extend %overHide;
+}
+
+#projects .projectImgs img { 
+  width: 100%;
+  border: 1px solid $darkColor;
+}
+/* End projects */
+
+/* Start about and faq */
+.about-faq h2, .about-faq h3 { margin-bottom: 20px; }
+
+.about-faq h3::after { @extend %hide; }
+
+.about-faq .btn { background-color: $mainColor }
+
+.about-faq .get-connected .btn:nth-child(2) {
+  background-color: $darkColor;
+  color: $wColor;
+}
+
+.about-faq i {
+  margin: 5px 10px;
+  font-size: 2em
+}
+
+.about-faq p, .about-faq .get-connected .btn { margin-bottom: 20px }
+
+.about-faq .fa-facebook { color: #3b5998 }
+.about-faq .fa-twitter-square { color: #55acee }
+.about-faq .fa-instagram { color: #e95950 }
+.about-faq .fa-linkedin { color: #007bb5 }
+
+.about-faq i { @extend %trans; }
+
+.about-faq i:hover { color: $mainColor }
+
+.about-faq .accordion .accordion-heading { background-color: $wColor }
+
+.about-faq .accordion .accordion-heading:hover, 
+.about-faq .accordion .active-acc {
+  background-color: $mainColor
+}
+
+.starkAndDesignContainer { margin: 40px 0 10px 0 }
+
+.starkAndDesign { padding: 0 40px }
+
+.starkAndDesign img { max-width: 100% }
+/* End about and faq */
+
+/* Start contact and request */
+.requestAndContact * { color: $wColor !important }
+
+.requestAndContact .contact {
+  border: 2px solid $mainColor;
+  margin: 20px 50px;
+  padding: 0px 30px 20px;
+  @include prefix(border-radius, 0 10% 0 10% !important);
+}
+
+.requestAndContact .contact i {
+  color: $mainColor !important;
+  margin-#{$right}: 10px;
+  margin-bottom: 10px;
+}
+
+.requestAndContact .contact i.fa-phone {
+  @include prefix(transform, rotateY(180deg));
+}
+
+.requestAndContact .request form .input-feild {
+  @extend %fl-l;
+  width: 50%;
+  padding: 10px 10px 0 10px;
+}
+
+.requestAndContact .request form .input-feild label {
+  @extend %cap;
+  margin-bottom: 5px;
+  color: $mainColor;
+  font-size: 0.8em;
+  @extend %block;
+}
+
+.requestAndContact .request form .input-feild input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  @extend %rad5px;
+}
+
+.requestAndContact .request form input[type='submit'] {
+  width: 95%;
+  height: 30px;
+  padding: 5px 10px;
+  background-color: $mainColor;
+  border: 1px solid $mainColor;
+  @extend %cap;
+  margin: 20px 10px 0 10px;
+  @extend %rad5px;
+}
+/* End contact and request */
+
+/* Start recent news */
+#blog { @extend %overHide;@extend %rel; }
+
+#blog .news-head { @extend %overHide }
+
+#blog .recent-news img { width: 100% !important }
+
+#blog .news-body .recent-news { @extend %txt-c; }
+
+#blog .news-body .recent-news > div { padding: 10px 20px }
+
+#blog .news-body .recent-news > div i {
+  color: rgba($darkColor, .25);
+  margin: 0 10px;
+  font-size: 1.25em;
+}
+
+#blog .news-body .recent-news h3 { margin-bottom: 10px; }
+
+#blog .news-body .recent-news > div span {
+  font-size: .75em;
+  @extend %cap;
+}
+/* Start recent news */
+
+/* Start footer */
+footer {
+  @extend %overHide;
+  background-color: $darkColor;
+  color: $wColor
+}
+
+footer .column:nth-child(1) .bottom-logo {
+  @extend %overHide;
+  margin-bottom: 20px;
+}
+
+footer .column:nth-child(1) .bottom-logo i {
+  margin-#{$right}: 5px;
+  color: $mainColor;
+}
+
+footer .column:nth-child(1) .bottom-logo i, 
+footer .column:nth-child(1) .bottom-logo span {
+  @extend %fl-l;
+}
+
+footer .column:nth-child(1) .bottom-logo i, 
+footer .column:nth-child(1) .bottom-logo span:first-child { 
+  font-size: 2em
+}
+
+footer .column:nth-child(1) .bottom-logo span:last-child {
+  font-size: 0.8em;
+  color: $xColor;
+}
+
+footer .column:nth-child(1) .contact-means i {
+  color: $mainColor;
+  margin-#{$right}: 5px;
+}
+
+footer .column:nth-child(1) .contact-means > div { margin-bottom: 20px }
+
+footer .column:nth-child(2) { @extend %cap; }
+
+footer .column:nth-child(2) div div { margin-bottom: 10px }
+
+footer .column:nth-child(2) i {
+  margin-#{$right}: 10px;
+  font-size: .5em;
+  color: $mainColor;
+}
+
+footer .column:nth-child(3) .content {
+  @extend %fl-l;
+  width: 50%;
+  @extend %cap;
+}
+
+footer .column:nth-child(3) .content div {
+  margin-bottom: 10px;
+  @extend %no-decore;
+}
+
+footer .column:nth-child(4) .tweet, 
+footer .column:nth-child(4) .tweet p { 
+  margin-bottom: 10px;
+  @extend %cap;
+}
+
+footer .column:nth-child(4) .tweet div { margin-bottom: 10px }
+
+footer .column:nth-child(4) .tweet .fa-twitter {
+  margin-#{$right}: 10px;
+  color: #55acee;
+}
+
+footer .copyright {
+  background-color: black;
+  @extend %cap;
+  @extend %txt-c;
+  color: $xColor;
+  padding: 10px 0px;
+}
+
+footer .copyright span {
+  color: $mainColor;
+  font-weight: 900;
+}
+/* End footer */
+
+/* Start media Query for mobile and tablet screens */
+@media (max-width: 992px) {
+  .wow{
+    animation-name: none !important;
+    visibility: visible !important;
+  }
+
+  .top-navbar .contact span {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .middle-navbar .factory , 
+  .middle-navbar .certified , 
+  .middle-navbar .winner {
+    text-align: center
+  }
+  .middle-navbar .factory span:first-of-type { font-size: 1.5em }
+
+  .middle-navbar .winner span:first-of-type, 
+  .middle-navbar .certified span:first-of-type {
+    font-size: 1.2em
+  }
+
+  .middle-navbar .factory i,
+  .middle-navbar .certified i,
+  .middle-navbar .winner i,
+  .middle-navbar .factory span, 
+  .middle-navbar .certified span, 
+  .middle-navbar .winner span {
+    float: none;
+  }
+
+  nav .navbar li:nth-last-of-type(1),
+  nav .navbar li:nth-last-of-type(2) {
+    float: none;
+  }
+
+  .testim p::after, .testim p::before {
+    display: none
+  }  
+
+  .testim .testim-about { text-align: center; }
+
+  .testim .testim-about .testim-img {
+    border: 1px solid $mainColor;
+    margin-bottom: 20px;
+    @include prefix(border-radius, 50%);
+    overflow: hidden;
+  }
+
+  #services .services-head > div,
+  #services .services-head > p,
+  #services .services-head .btn,
+  #blog .news-head > div,
+  #blog .news-head > p,
+  #blog .news-head .btn {
+    float: none;
+    width: 100%;
+    display: block;
+  }
+
+  #services .services-head > div, 
+  #blog .news-head > div { 
+    text-align: center
+  }
+
+  #services .services-head > p, 
+  #services .services-head h2, 
+  #blog .news-head > p, 
+  #blog .news-head h2 { 
+    margin: 0 
+  }
+
+}
+/* End media Query for mobile and tablet screens */

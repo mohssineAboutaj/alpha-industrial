@@ -1,0 +1,471 @@
+//
+// Template name : alphaIndustrial 
+// Creation date : 04/03/2018 
+// Author        : Mohssine Aboutaj 
+// Description   : This is template single page for your industry and factory, you can also customize for use in your work
+// Contact Me    : mohssineaboutajtemplates@gmail.com
+//
+='\n'
+//- Directory of all files, css and javaScript and images
+-var imgDirectory = 'img/';
+-var cssDirectory = 'css/';
+-var jsDirectory = 'js/';
+//------------------
+doctype html
+='\n'
+<html lang="zxx">
+<head>
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  ='\n'
+  <!-- page title -->
+  title Alpha Industrial - Best industrial template
+  ='\n'
+  <!-- Start google fonts -->
+  each fontURL in ["https://fonts.googleapis.com/css?family=Roboto:900;", "https://fonts.googleapis.com/css?family=Open+Sans"]
+    link(rel="stylesheet", href=fontURL)
+  ='\n'
+  <!-- End google fonts -->
+  <!-- Start css files -->
+  <!-- font-awesome iconic v5, normalize v8, bxslider css, ... -->
+  each cssFile in ["loadingMAF.css", "normalize.min.css","font-awesome-all-v5.min.css", "jquery.bxslider.min.css", "animate.min.css", "gridSystemMAF.min.css", "style.css"]
+    link(rel="stylesheet", href=cssDirectory + cssFile)
+='\n'
+  <!-- End css files -->
+</head>
+<body data-main-color="#fdca01">
+
+<!-- Start loading spinner -->
+div.loadingMAF.loading-spinner
+  each i in [1, 2, 3, 4]
+    div(class="s"+i)
+='\n'
+<!-- Start loading spinner -->
+='\n\n'
+<!-- Start top-navbar -->
+div.top-navbar
+  div.container
+    div.row-between
+      div.contact
+        span
+          ='\n\t\t\t\t'
+          i.fas.fa-location-arrow
+          | 5553 Lorem ipsum dolor sit
+        span
+          ='\n\t\t\t\t'
+          i.fas.fa-phone
+          | +013467534644
+      div.follow follow
+        ='\n\t\t\t\t'
+        i.fab.fa-facebook-f.fa-fw
+        ='\n\t\t\t\t'
+        i.fab.fa-twitter.fa-fw
+        ='\n\t\t\t\t'
+        i.fab.fa-linkedin-in.fa-fw
+        ='\n\t\t\t\t'
+        i.fab.fa-pinterest-p.fa-fw
+        ='\n\t\t\t\t'
+        i.fas.fa-rss.fa-fw
+='\n'
+<!-- End top-navbar -->
+='\n\n'
+<!-- Start middle-navbar -->
+div.middle-navbar
+  div.container
+    div.factory
+      i.fas.fa-industry.fa-2x
+      div
+        span industrial
+        span industry &amp; factory solution
+    div.certified
+      i.fas.fa-certificate.fa-2x
+      div
+        span global certified
+        span iso 9001 2016
+    div.winner
+      i.fas.fa-trophy.fa-2x
+      div
+        span winner
+        span constaction award 2016
+    div.clearfix
+='\n'
+<!-- End middle-navbar -->
+='\n\n'
+<!-- Start main-navbar -->
+nav.nav.sm-fixed
+  div.logo 
+    | alpha
+    i.fas.fa-industry 
+    | industry
+  ul.navbar.dropdown.dropdown-inherit
+    each link in ['home','about','services','projects','pages','blog','contact']
+      li
+        a(href="#"+link)= link
+    li
+      a(href="#request", class="active") request quote
+    li
+      a(href="#")
+        i.fas.fa-shopping-cart
+        | cart (2)
+  div.nav-btn.nav-btn-right 
+    i.fas.fa-list
+='\n'
+<!-- End main-navbar -->
+='\n\n'
+<!-- Start header -->
+header#home.no-decore
+  div.bxslider
+    div
+      h1 we provide the best 
+        span industrial
+        br
+        | services worldwide
+      p an unknown printer took gallery of type and scrembled it to make a type specimen book.
+      div.btn about us
+      div.btn explore
+    div
+      h1 We have the 
+        span best industries 
+        | and the 
+        span best quality
+      p an unknown printer took gallery of type and scrembled it to make a type specimen book.
+    div
+      h1 take a quote
+      p an unknown printer took gallery of type and scrembled it to make a type specimen book.
+      div.btn request a quote
+='\n'
+<!-- End header -->
+='\n\n'
+<!-- Start our services -->
+div.section#services
+  div.container
+    div.services-head
+      div.special-heading.heading-aside
+        h2 our services
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ex ea commodo
+      div.btn all services
+    -var servicesClass = ['wow','bounceInDown','service-img', 'grid-12-xs', 'grid-12-sm', 'grid-4-md', 'grid-4-lg'];
+    div.services-body
+      div.row-between
+        each serviceTitle, serviceX in {'service1':'mechanical works', 'service2':'power and energy', 'service3':'petroleum refinery'}
+          div(class=servicesClass)
+            img(src=imgDirectory + serviceX +'.jpg', alt=serviceX, title=serviceX)
+            div.img-title
+              div.img-info
+                span
+                  i.fas.fa-industry
+                h4=serviceTitle
+              div.img-btns
+                div.btn.btn-grass read more
+                div.btn.btn-sky live preview
+='\n'
+<!-- End our services -->
+='\n\n'
+<!-- Start testim -->
+div.section.testim.no-decore#testim.wow.fadeIn
+  div.container
+    div.bxslider
+      div
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuo. Duis aute irure dolor in reprehenderit in voluptate velit dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        div.testim-about.ver-center
+          span.testim-img.fl-l
+            img(src=imgDirectory + 'testim1.jpg', alt='testim')
+          span.testim-info.fl-l
+            span jake cube
+            br
+            span directory of boards, machinima
+      div
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuo. Duis aute irure dolor in reprehenderit in voluptate velit dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        div.testim-about
+          span.testim-img.fl-l
+            img(src=imgDirectory + 'testim2.jpg', alt='testim')
+          span.testim-info.fl-l
+            span carl smith
+            br
+            span genaral admin
+      div
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuo. Duis aute irure dolor in reprehenderit in voluptate velit dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        div.testim-about
+          span.testim-img.fl-l
+            img(src=imgDirectory + 'testim3.jpg', alt='testim')
+          span.testim-info.fl-l
+            span mark dark
+            br
+            span modirator of petroleum
+='\n'
+<!-- End testim -->
+='\n\n'
+<!-- Start we offer -->
+div.section.we-offer#offer
+  div.container.row-around
+    -var offerClass = ['wow','bounceInDown','offer', 'grid-12-xs', 'grid-12-sm','grid-4-md', 'grid-4-lg'];
+    div(class=offerClass)
+      div.special-heading.heading-aside
+        h2 what we offer
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      div.btn read more
+    div(class=offerClass)
+      div
+        img(src=imgDirectory +"offer1.png",  alt="offer1")
+        div.offer-info
+          h3 advanced technology
+          p 
+            | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          details
+            summary show more
+            | proident in culpa qui officia deserunt mollit anim id est laborum.
+      div
+        img(src=imgDirectory +"offer2.png",  alt="offer2")
+        div.offer-info
+          h3 customer support
+          p 
+            | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          details
+            summary show more
+            | proident in culpa qui officia deserunt mollit anim id est laborum.
+    div(class=offerClass)
+      div
+        ='\n\t\t\t\t'
+        img(src=imgDirectory +"offer3.png",  alt="offer3")
+        div.offer-info
+          h3 expert engineers
+          p 
+            | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          details
+            summary show more
+            | proident in culpa qui officia deserunt mollit anim id est laborum.
+      div
+        ='\n\t\t\t\t'
+        img(src=imgDirectory +"offer4.png",  alt="offer4")
+        div.offer-info
+          h3 delivry on time
+          p 
+            | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          details
+            summary show more
+            | proident in culpa qui officia deserunt mollit anim id est laborum.
+    div.clearfix
+='\n'
+<!-- End we offer -->
+='\n\n'
+<!-- Start project -->
+div.section#projects.wow.fadeIn
+  div.special-heading.heading-center
+    h2 recent projects
+  p proident in culpa qui officia deserunt mollit anim id est laborum.
+    br
+    | proident eserunt mollit anim id 
+  div.row
+    each projectImg in ['project1.jpg', 'project2.jpg', 'project3.jpg', 'project4.jpg']
+      div.projectImgs.grid-12-xs-n.grid-6-sm-n.grid-3-md-n.grid-3-lg-n
+        img(src=imgDirectory + projectImg, alt=projectImg)
+='\n'
+<!-- End project -->
+='\n\n'
+<!-- Start about us -->
+div.section#about
+  div.container.row-around
+    -var aboutAndFaqClass = ['wow','bounceInDown','about-faq','grid-12-xs', 'grid-12-sm', 'grid-6-md', 'grid-6-lg']
+    div(class=aboutAndFaqClass)
+      div.special-heading.heading-center
+        h2 about us
+      h3 get full range for premuim industrial services of your business
+      p consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      details
+        summary show more
+        | proident in culpa qui officia deserunt mollit anim id est laborum.
+      div.get-connected
+        div.btn read more
+        div.btn company history
+        div.upper
+          | get connected withe us:
+          br
+          i.fab.fa-facebook
+          i.fab.fa-twitter-square
+          i.fab.fa-instagram
+          i.fab.fa-linkedin
+    div(class=aboutAndFaqClass)
+      div.special-heading.heading-center
+        h2 faq
+      h3 all these years, our different services has delivered long lasting innovation
+      p cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      div.accordion
+        each accordionAttr, i in {1:'collapseOne',2:'collapseTwo',3:'collapseThree'}
+          div.accordion-part
+            div(class="accordion-heading", data-target="#"+ accordionAttr) Anim pariatur reprehenderit #
+              =i
+            div(id=accordionAttr, class="accordion-body", data-parent="#accordion") Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+    div.clearfix
+    div.wow.bounceInUp
+      div.row-around.starkAndDesignContainer
+        -var starkAndDesign = ['starkAndDesign','grid-1-4','grid-12-xs','grid-6-sm','grid-3-md','grid-3-lg']
+        each sd in ['sd1.png', 'sd2.png', 'sd3.png', 'sd4.png']
+          div(class=starkAndDesign)
+            img(src=imgDirectory + sd, alt=sd)
+='\n'
+<!-- End design and stark -->
+='\n\n'
+<!-- Start request a quote -->
+div.section.requestAndContact
+  div.container.row-around
+    -var contactAndRequest = ['grid-12-xs', 'grid-12-sm', 'grid-6-md', 'grid-6-lg']
+    div(class=contactAndRequest)
+      div.contact#contact.wow.slideInLeft
+        div.special-heading.heading-aside
+          h2 contact
+        p irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur.
+        div.contact-means
+          i.fas.fa-phone
+          | +123 435 234 342
+          br
+          i.fas.fa-envelope
+          | info@industrial.com
+          br
+          i.fas.fa-home
+          | 23 av lorem uîp ouoms ipsum dolore
+    div(class=contactAndRequest)
+      div.request#request.wow.slideInRight
+        div.special-heading.heading-aside
+          h2 request a quote
+        p irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        form(action="proccess.php" method="POST")
+          each inputType, inputLabel in {'full name':'text','email':'email','phone number':'text','busness type':'text'}
+            div.input-feild
+              label= inputLabel
+              input(type=inputType, name=inputLabel.replace(' ',''))
+          div.clearfix
+          input(type="submit", value="submit")
+    div.clearfix
+='\n'
+<!-- End request a quote -->
+='\n\n'
+<!-- Start recent news -->
+div.section#blog.wow.fadeIn
+  div.container
+    div.news-head
+      div.special-heading.heading-aside
+        h2 recent news
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ex ea commodo
+      div.btn all services
+    div.news-body.row-around
+      -var newsClass = ['recent-news', 'grid-12-xs', 'grid-12-sm', 'grid-4-md', 'grid-4-lg']
+      div(class=newsClass)
+        img(src=imgDirectory + 'news1.png', alt='news1')
+        div
+          i.fas.fa-clock
+          span nov 25
+          i.fas.fa-comment
+          span 2 comment
+        h3 quis nostrud exercitation ullamco laboris
+        p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      div(class=newsClass)
+        img(src=imgDirectory + 'news2.png', alt='news2')
+        div
+          i.fas.fa-clock
+          span dec 15
+          i.fas.fa-comment
+          span 13 comment
+        h3 quis nostrud exercitation ullamco laboris
+        p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      div(class=newsClass)
+        img(src=imgDirectory + 'news3.png', alt='news3')
+        div
+          i.fas.fa-clock
+          span apr 05
+          i.fas.fa-comment
+          span 5 comment
+        h3 quis nostrud exercitation ullamco laboris
+        p ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      div.clearfix
+='\n'
+<!-- End recent news -->
+='\n\n'
+<!-- Start footer -->
+footer
+  div.container.row-between
+    -var footerClass = ['wow','bounceInUp','column', 'grid-12-xs', 'grid-12-sm', 'grid-3-md', 'grid-3-lg'];
+    div(class=footerClass)
+      div.bottom-logo
+        ='\n\t\t'
+        i.fas.fa-industry.fa-2x
+        ='\n\t\t'
+        span industrial
+        ='\n\t\t'
+        br
+        span industry &amp; factory solution
+      div.contact-means
+        div
+          i.fas.fa-home
+          | incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        div
+          i.fas.fa-phone
+          | +123 455 456 465
+        div
+          i.fas.fa-home
+          | incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    div(class=footerClass)
+      div.special-heading.heading-aside
+        h3 services
+      div
+        div
+          i.fas.fa-chevron-right
+          | agricultutre proccessing
+        div
+          i.fas.fa-chevron-right
+          | chemical research
+        div
+          i.fas.fa-chevron-right
+          | metal engineering
+        div
+          i.fas.fa-chevron-right
+          | mechanical engineering
+        div
+          i.fas.fa-chevron-right
+          | petroleum &amp; gas
+    div(class=footerClass)
+      div.special-heading.heading-aside
+        h3 navigation
+      div.content
+        each link in ['home','about','services','projects','pages','blog','contact']
+          div
+            a(href="#" + link)= link
+      div.content
+        div gallery
+        div privacy 
+        div policy
+      div.clearfix
+    div(class=footerClass)
+      div.special-heading.heading-aside
+        h3 twitter feed
+      div.tweet
+        p consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        div
+          i.fab.fa-twitter
+          | @jason walk
+        p consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        div
+          i.fab.fa-twitter
+          | @frank shark
+    div.clearfix
+  div.copyright &copy; 2018 all right reserved by 
+      span mohssine aboutaj
+='\n'
+<!-- Start footer -->
+='\n\n'
+<!-- Script files -->
+each jsFile in ["jquery-3.1.1.min.js", "jquery.bxslider.min.js", "jquery.nicescroll.min.js", "wow.min.js", "custom-plugins.js", "scrollTopMAF.js", "script.js"]
+  script(src=jsDirectory + jsFile)
+='\n'
+</body>
+</html>

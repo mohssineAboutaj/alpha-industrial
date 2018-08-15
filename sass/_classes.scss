@@ -1,0 +1,81 @@
+// file for import only
+
+// start functions
+@mixin prefix($propertie, $value){
+	-webkit-#{$propertie}: $value;
+	-moz-#{$propertie}: $value;
+	-ms-#{$propertie}: $value;
+	-o-#{$propertie}: $value;
+	#{$propertie}: $value;  
+}
+// End functions
+
+// Start page Direction
+$left: left;
+
+$right: right;
+// End page Direction
+
+// Start placeholder classes
+%hide { display: none }
+
+%ib { display: inline-block }
+
+%block { display: block }
+
+%nopm { padding: 0;margin: 0}
+
+%overHide { overflow: hidden}
+
+%fl-l { float: left}
+
+%fl-r { float: right}
+
+%nofl { float: none}
+
+%no-border { border: none}
+
+%no-decore, %no-decore li, %no-decore a {
+  text-decoration: none;
+  list-style: none;
+}
+
+%no-decore a { color: $wColor }
+
+%txt-c { text-align: center }
+
+%cap { text-transform: capitalize }
+
+%upper { text-transform: uppercase }
+
+%rel { position: relative }
+
+%abs { position: absolute }
+
+%circle { @include prefix(border-radius, 50%) }
+
+%trans {
+  @include prefix(transition, all .5s ease-in-out);
+  cursor: pointer;
+}
+
+@for $i from 5 through 50 {
+	%rad#{$i}px {
+		@include prefix(border-radius, $i + px);
+	}
+
+	%rad#{$i} {
+		@include prefix(border-radius, $i);
+	}
+}
+
+%overlay {
+	@extend %abs;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+// End placeholder classes
